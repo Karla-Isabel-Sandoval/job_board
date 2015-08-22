@@ -1,0 +1,17 @@
+<%= form_for @job do |f| %>
+ <% @job.errors.full_messages.each do |message| %>
+     <p class= 'error-message'><%= message %></p>
+     <% end %>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, size: '60x6' %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
